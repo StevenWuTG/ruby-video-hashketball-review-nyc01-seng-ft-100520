@@ -1,4 +1,5 @@
 # Write your code below game_hash
+require 'pry'
 
 def game_hash
   {
@@ -128,3 +129,13 @@ def game_hash
 end
 
 # Write code here
+# * Build a method, `num_points_scored` that takes in an argument of a player's
+#   name and returns the number of points scored for that player.
+
+def num_points_scored player_name
+  binding.pry
+  players = game_hash[:home][:players].merge(game_hash[:away][:players])
+  binding.pry
+  players[player_name][:points]
+  
+end
